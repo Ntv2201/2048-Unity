@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 18872592}
   - component: {fileID: 18872594}
   - component: {fileID: 18872593}
+  - component: {fileID: 18872595}
   m_Layer: 5
   m_Name: Cell (2)
   m_TagString: Untagged
@@ -194,6 +195,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18872591}
   m_CullTransparentMesh: 1
+--- !u!114 &18872595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18872591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134d75345fcac9849a7aa62cf28eac6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileCell
 --- !u!1 &77826929
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,6 +218,7 @@ GameObject:
   - component: {fileID: 77826930}
   - component: {fileID: 77826932}
   - component: {fileID: 77826931}
+  - component: {fileID: 77826933}
   m_Layer: 5
   m_Name: Cell (3)
   m_TagString: Untagged
@@ -269,6 +283,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77826929}
   m_CullTransparentMesh: 1
+--- !u!114 &77826933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77826929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134d75345fcac9849a7aa62cf28eac6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileCell
 --- !u!1 &90928650
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,6 +304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 90928651}
+  - component: {fileID: 90928652}
   m_Layer: 5
   m_Name: Board
   m_TagString: Untagged
@@ -306,6 +333,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &90928652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90928650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3364a17e4ee268a4f94fe13f1ceb39e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileBoard
+  tilePrefab: {fileID: 4581740166207304819, guid: 19857f2394399bf469b1feaa18fed6e4, type: 3}
+  tileStates:
+  - {fileID: 11400000, guid: 233eb76aa854f4b4486ec012cae19e24, type: 2}
+  - {fileID: 11400000, guid: 340d566a29ddd5a4790bf49eb7207068, type: 2}
+  - {fileID: 11400000, guid: 3fe01683a6e018d49b7eaf5741de01a0, type: 2}
+  - {fileID: 11400000, guid: 8985a65507bf8ae489c31a198386d838, type: 2}
+  - {fileID: 11400000, guid: 4a8e675942c42c443b8933fd925987d3, type: 2}
+  - {fileID: 11400000, guid: 7774a8f0e28bd544681393251cf28bc5, type: 2}
+  - {fileID: 11400000, guid: 0eabc339395d5a84fb49d7f820dab82d, type: 2}
+  - {fileID: 11400000, guid: 5f1a92d5c3e5ddf47b98334962ddbf69, type: 2}
+  - {fileID: 11400000, guid: 417cc7c225bc53c429411a82593bb129, type: 2}
+  - {fileID: 11400000, guid: c392abbccd7e69d47b9ccd83dfebc4fa, type: 2}
+  - {fileID: 11400000, guid: 1352357e789fa574483e4b70dea9dfa4, type: 2}
 --- !u!1 &197249965
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,6 +369,7 @@ GameObject:
   - component: {fileID: 197249966}
   - component: {fileID: 197249968}
   - component: {fileID: 197249967}
+  - component: {fileID: 197249969}
   m_Layer: 5
   m_Name: Cell (2)
   m_TagString: Untagged
@@ -381,6 +434,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197249965}
   m_CullTransparentMesh: 1
+--- !u!114 &197249969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197249965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134d75345fcac9849a7aa62cf28eac6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileCell
 --- !u!1 &210540583
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,6 +457,7 @@ GameObject:
   - component: {fileID: 210540584}
   - component: {fileID: 210540586}
   - component: {fileID: 210540585}
+  - component: {fileID: 210540587}
   m_Layer: 5
   m_Name: Cell
   m_TagString: Untagged
@@ -456,6 +522,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210540583}
   m_CullTransparentMesh: 1
+--- !u!114 &210540587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210540583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134d75345fcac9849a7aa62cf28eac6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileCell
 --- !u!1 &239211340
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,6 +545,7 @@ GameObject:
   - component: {fileID: 239211341}
   - component: {fileID: 239211343}
   - component: {fileID: 239211342}
+  - component: {fileID: 239211344}
   m_Layer: 5
   m_Name: Cell (3)
   m_TagString: Untagged
@@ -531,6 +610,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239211340}
   m_CullTransparentMesh: 1
+--- !u!114 &239211344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239211340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134d75345fcac9849a7aa62cf28eac6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileCell
 --- !u!1 &306848393
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,6 +631,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 306848394}
+  - component: {fileID: 306848395}
   m_Layer: 5
   m_Name: Row (3)
   m_TagString: Untagged
@@ -570,6 +662,18 @@ RectTransform:
   m_AnchoredPosition: {x: 234, y: -415.5}
   m_SizeDelta: {x: 468, y: 105}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &306848395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306848393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea1b376f78f0f346ac10fc9c57a8c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileRow
 --- !u!1 &347181005
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,6 +685,7 @@ GameObject:
   - component: {fileID: 347181006}
   - component: {fileID: 347181008}
   - component: {fileID: 347181007}
+  - component: {fileID: 347181009}
   m_Layer: 5
   m_Name: Cell
   m_TagString: Untagged
@@ -645,6 +750,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347181005}
   m_CullTransparentMesh: 1
+--- !u!114 &347181009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347181005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134d75345fcac9849a7aa62cf28eac6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileCell
 --- !u!1 &399318912
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,6 +773,7 @@ GameObject:
   - component: {fileID: 399318913}
   - component: {fileID: 399318915}
   - component: {fileID: 399318914}
+  - component: {fileID: 399318916}
   m_Layer: 5
   m_Name: Cell (1)
   m_TagString: Untagged
@@ -720,6 +838,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399318912}
   m_CullTransparentMesh: 1
+--- !u!114 &399318916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399318912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134d75345fcac9849a7aa62cf28eac6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileCell
 --- !u!1 &432591110
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +861,7 @@ GameObject:
   - component: {fileID: 432591111}
   - component: {fileID: 432591113}
   - component: {fileID: 432591112}
+  - component: {fileID: 432591114}
   m_Layer: 5
   m_Name: Cell (1)
   m_TagString: Untagged
@@ -795,6 +926,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 432591110}
   m_CullTransparentMesh: 1
+--- !u!114 &432591114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432591110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134d75345fcac9849a7aa62cf28eac6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileCell
 --- !u!1 &452038760
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,6 +949,7 @@ GameObject:
   - component: {fileID: 452038761}
   - component: {fileID: 452038763}
   - component: {fileID: 452038762}
+  - component: {fileID: 452038764}
   m_Layer: 5
   m_Name: Cell (3)
   m_TagString: Untagged
@@ -870,6 +1014,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452038760}
   m_CullTransparentMesh: 1
+--- !u!114 &452038764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452038760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134d75345fcac9849a7aa62cf28eac6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileCell
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,6 +1172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 535346332}
+  - component: {fileID: 535346333}
   m_Layer: 5
   m_Name: Row (1)
   m_TagString: Untagged
@@ -1046,6 +1203,18 @@ RectTransform:
   m_AnchoredPosition: {x: 234, y: -173.5}
   m_SizeDelta: {x: 468, y: 105}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &535346333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535346331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea1b376f78f0f346ac10fc9c57a8c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileRow
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,6 +1385,7 @@ GameObject:
   - component: {fileID: 1126087361}
   - component: {fileID: 1126087363}
   - component: {fileID: 1126087362}
+  - component: {fileID: 1126087364}
   m_Layer: 5
   m_Name: Cell
   m_TagString: Untagged
@@ -1280,6 +1450,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126087360}
   m_CullTransparentMesh: 1
+--- !u!114 &1126087364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126087360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134d75345fcac9849a7aa62cf28eac6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileCell
 --- !u!1 &1286654050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,6 +1471,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1286654051}
+  - component: {fileID: 1286654052}
   m_Layer: 5
   m_Name: Row (2)
   m_TagString: Untagged
@@ -1319,6 +1502,18 @@ RectTransform:
   m_AnchoredPosition: {x: 234, y: -294.5}
   m_SizeDelta: {x: 468, y: 105}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1286654052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286654050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea1b376f78f0f346ac10fc9c57a8c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileRow
 --- !u!1 &1310644880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,6 +1628,7 @@ GameObject:
   - component: {fileID: 1338412746}
   - component: {fileID: 1338412748}
   - component: {fileID: 1338412747}
+  - component: {fileID: 1338412749}
   m_Layer: 5
   m_Name: Cell (1)
   m_TagString: Untagged
@@ -1497,6 +1693,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338412745}
   m_CullTransparentMesh: 1
+--- !u!114 &1338412749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338412745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134d75345fcac9849a7aa62cf28eac6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileCell
 --- !u!1 &1414543770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,6 +1716,7 @@ GameObject:
   - component: {fileID: 1414543771}
   - component: {fileID: 1414543773}
   - component: {fileID: 1414543772}
+  - component: {fileID: 1414543774}
   m_Layer: 5
   m_Name: Cell
   m_TagString: Untagged
@@ -1572,6 +1781,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414543770}
   m_CullTransparentMesh: 1
+--- !u!114 &1414543774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414543770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134d75345fcac9849a7aa62cf28eac6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileCell
 --- !u!1 &1442447387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,6 +1802,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1442447388}
+  - component: {fileID: 1442447389}
   m_Layer: 5
   m_Name: Row
   m_TagString: Untagged
@@ -1611,6 +1833,18 @@ RectTransform:
   m_AnchoredPosition: {x: 234, y: -52.5}
   m_SizeDelta: {x: 468, y: 105}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1442447389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442447387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea1b376f78f0f346ac10fc9c57a8c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileRow
 --- !u!1 &1575869201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1701,6 +1935,7 @@ GameObject:
   - component: {fileID: 1586016167}
   - component: {fileID: 1586016169}
   - component: {fileID: 1586016168}
+  - component: {fileID: 1586016170}
   m_Layer: 5
   m_Name: Cell (1)
   m_TagString: Untagged
@@ -1765,6 +2000,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586016166}
   m_CullTransparentMesh: 1
+--- !u!114 &1586016170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586016166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134d75345fcac9849a7aa62cf28eac6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileCell
 --- !u!1 &1773412333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,6 +2021,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1773412334}
+  - component: {fileID: 1773412335}
   m_Layer: 5
   m_Name: Grid
   m_TagString: Untagged
@@ -1804,6 +2052,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -32, y: -32}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1773412335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773412333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9cd695685934584692644060be34f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileGrid
 --- !u!1 &1947200435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,6 +2075,7 @@ GameObject:
   - component: {fileID: 1947200436}
   - component: {fileID: 1947200438}
   - component: {fileID: 1947200437}
+  - component: {fileID: 1947200439}
   m_Layer: 5
   m_Name: Cell (3)
   m_TagString: Untagged
@@ -1879,6 +2140,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1947200435}
   m_CullTransparentMesh: 1
+--- !u!114 &1947200439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947200435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134d75345fcac9849a7aa62cf28eac6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileCell
 --- !u!1 &1964797045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,6 +2163,7 @@ GameObject:
   - component: {fileID: 1964797046}
   - component: {fileID: 1964797048}
   - component: {fileID: 1964797047}
+  - component: {fileID: 1964797049}
   m_Layer: 5
   m_Name: Cell (2)
   m_TagString: Untagged
@@ -1954,6 +2228,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964797045}
   m_CullTransparentMesh: 1
+--- !u!114 &1964797049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964797045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134d75345fcac9849a7aa62cf28eac6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileCell
 --- !u!1 &2137587178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1965,6 +2251,7 @@ GameObject:
   - component: {fileID: 2137587179}
   - component: {fileID: 2137587181}
   - component: {fileID: 2137587180}
+  - component: {fileID: 2137587182}
   m_Layer: 5
   m_Name: Cell (2)
   m_TagString: Untagged
@@ -2029,6 +2316,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137587178}
   m_CullTransparentMesh: 1
+--- !u!114 &2137587182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137587178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134d75345fcac9849a7aa62cf28eac6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileCell
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
