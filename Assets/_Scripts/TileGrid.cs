@@ -31,5 +31,31 @@ public class TileGrid : MonoBehaviour
         }
     }
 
+    public TileCell GetRandomEmptyCell()
+    {
+        int index = Random.Range(0, cells.Length);
+        int startingIndex = index;
+
+        // find the empty cell
+        while (cells[index].occupied)
+        {
+            index++;
+            
+            // if the number is higher than the length of cells, then reset it
+            if(index >= cells.Length)
+            {
+                index = 0;
+            }
+
+            // if all of the cells are occupied, return null
+            if(index == startingIndex)
+            {
+                return null;
+            }
+        }
+        
+        return cells[index]; 
+    }
+
 
 }

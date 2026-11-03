@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TileBoard : MonoBehaviour
@@ -24,9 +25,10 @@ public class TileBoard : MonoBehaviour
     {
         Tile tile = Instantiate(tilePrefab, grid.transform);
         tile.SetState(tileStates[0], 2);
+        tile.Spawn(grid.GetRandomEmptyCell());
+        tiles.Add(tile);
 
     }
-
 
 
 
