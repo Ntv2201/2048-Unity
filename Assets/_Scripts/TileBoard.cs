@@ -1,8 +1,6 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.Timeline;
 
 public class TileBoard : MonoBehaviour
 {
@@ -10,6 +8,7 @@ public class TileBoard : MonoBehaviour
     public TileState[] tileStates; 
     private TileGrid grid;
     private List<Tile> tiles;
+    private bool waiting;
 
     private void Awake()
     {
@@ -25,26 +24,40 @@ public class TileBoard : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        if (!waiting)
         {
-            MoveTiles(Vector2Int.up, 0, 1, 1, 1);
+            if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                MoveTiles(Vector2Int.up, 0, 1, 1, 1);
+            }
+            else if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                MoveTiles(Vector2Int.down, 0, 1, grid.height - 2, -1);
+            }
+            else if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                MoveTiles(Vector2Int.left, 1, 1, 0, 1);
+            }
+            else if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                MoveTiles(Vector2Int.right, grid.width - 2, -1, 0, 1);
+            }
         }
-        else if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            MoveTiles(Vector2Int.down, 0, 1, grid.height - 2, -1);
-        }
-        else if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            MoveTiles(Vector2Int.left, 1, 1, 0, 1);
-        }
-        else if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            MoveTiles(Vector2Int.right, grid.width - 2, -1, 0, 1);
-        }
+        
+    }
+
+    private void CreateTile()
+    {
+        Tile tile = Instantiate(tilePrefab, grid.transform);
+        tile.SetState(tileStates[0], 2);
+        tile.Spawn(grid.GetRandomEmptyCell());
+        tiles.Add(tile);
+
     }
 
     private void MoveTiles(Vector2Int direction, int startX, int incrementX, int startY, int incrementY)
     {
+        bool changed = false;
         for (int x = startX; x >= 0 && x < grid.width; x += incrementX)
         {
             for (int y = startY; y >= 0 && y < grid.height; y += incrementY)
@@ -53,13 +66,19 @@ public class TileBoard : MonoBehaviour
 
                 if (cell.occupied)
                 {
-                    MoveTile(cell.tile, direction);
+                    changed |= MoveTile(cell.tile, direction);
                 }
             }
         }
+
+        if (changed)
+        {
+            StartCoroutine(WaitForChangesCoroutine());
+        }
+
     }
 
-    private void MoveTile(Tile tile, Vector2Int direction)
+    private bool MoveTile(Tile tile, Vector2Int direction)
     {
         TileCell newCell = null;
         TileCell adjacent = grid.GetAdjacentCell(tile.cell, direction);
@@ -78,16 +97,20 @@ public class TileBoard : MonoBehaviour
         if(newCell != null)
         {
             tile.MoveTo(newCell);
+            return true;
         }
+        return false;
     }
 
-    private void CreateTile()
+    private IEnumerator WaitForChangesCoroutine()
     {
-        Tile tile = Instantiate(tilePrefab, grid.transform);
-        tile.SetState(tileStates[0], 2);
-        tile.Spawn(grid.GetRandomEmptyCell());
-        tiles.Add(tile);
+        waiting = true;
+        yield return new WaitForSeconds(0.1f);
 
+        waiting = false;
+
+        // TO DO: create new tile
+        // TO DO: check for game over
     }
 
 }
